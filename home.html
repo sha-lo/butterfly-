@@ -1,0 +1,279 @@
+<html>
+    <head>
+        <!-- Link custom stylesheet -->
+        <link rel="stylesheet" href="style/style.css">
+
+        <!-- Link gallery stylesheet -->
+        <link rel="stylesheet" href="style/slider-style.css">
+
+        <!-- Setup Shoelace CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/themes/light.css">
+
+        <!-- Setup Glide CSS for Carousel - https://glidejs.com/ -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+
+        <!-- Setup Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <div class="container-fluid home">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home-slider">
+                        <div class="glide">
+                            <div class="glide__bullets" data-glide-el="controls[nav]">
+                                <button class="glide__bullet home-nav" data-glide-dir="=0">Home</button>
+                                <button class="glide__bullet about-nav" data-glide-dir="=1">About</button>
+                                <button class="glide__bullet gallery-nav" data-glide-dir="=2">Gallery</button>
+                            </div>
+                            <div class="sound-controls">
+                                <div id="bars" onClick="togglePlay()">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="mute" id="mute"><img src="images/mute.png" alt=""></div>
+                                <audio id="player" autoplay loop>
+                                    <source src="sound/nature.mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides">
+                                    <li class="glide__slide homepage">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-4 butterfly-text-wrapper">
+                                                    <div class="butterfly-title">
+                                                        <p class="fade-in">The</br>Butterfly</p>
+                                                    </div>
+                                                    <div class="butterfly-intro-text">
+                                                        <p class="fade-in">Birth, growth, reproduction and death represent the four stages of the life cycle of all animals. Although these stages are common to all animals, they vary significantly among species. For instance, while insects, birds and reptiles are born from an egg, mammals develop as embryos inside the mothers' bodies.  Most baby animals appear similar to their adult selves. Some types of animals, however, including most insects and most amphibians, go through radical transformations during their growing stage. This process is called metamorphosis. The entire life cycle of an animal can last from only several days or weeks, as it happens with many insects, to more than a century, as in the case of some tortoise species.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 live-butterfly">
+                                                    <div class="butterfly-gif-wrapper">
+                                                        <img src="images/butterfly.gif" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 get-started-section">
+                                                    <div class="button-wrapper">
+                                                        <sl-button id="get-started-btn" type="primary" outline>Get Started</sl-button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="glide__slide about">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="about-title">
+                                                        <p class="fade-in">The</br>life cycle</p>
+                                                    </div>
+                                                    <div class="about-text">
+                                                        <p class="fade-in">Let’s explore a butterfly’s life cycle in detail, including all four stages of life. All butterflies have "complete metamorphosis." To grow into an adult they go through 4 stages: egg, larva, pupa and adult. Each stage has a different goal - for instance, caterpillars need to eat a lot, and adults need to reproduce. Depending on the type of butterfly, the life cycle of a butterfly may take anywhere from one month to a whole year.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="life-cycle-wrapper">
+                                                        <!-- Image Map Generated by http://www.image-map.net/ -->
+                                                        <img src="images/full cycle.jpg" usemap="#image-map">
+
+                                                        <map name="image-map">
+                                                            <area target="" alt="" title="" id="egg" href="#" coords="179,213,88,100" shape="rect">
+                                                            <area target="" alt="" title="" id="larva" href="#" coords="326,84,484,203" shape="rect">
+                                                            <area target="" alt="" title="" id="evo" href="#" coords="637,143,761,315" shape="rect">
+                                                            <area target="" alt="" title="" id="butterfly" href="#" coords="906,0,1104,240" shape="rect">
+                                                        </map>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cycle-info-wrapper">
+                                            <div class="egg-wrapper evo-cards">
+                                                <div class="card-num">
+                                                    <p>1</p>
+                                                </div>
+                                                <div class="close-btn">X</div>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="card-image">
+                                                                <img src="images/egg.jpeg" alt="">
+                                                            </div>
+                                                            <div class="card-title">
+                                                                <p>The Egg</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-text">
+                                                                <p>A butterfly starts life as a very small, round, oval or cylindrical egg.  The coolest thing about butterfly eggs, especially monarch butterfly eggs, is that if you look close enough you can actually see the tiny caterpillar growing inside of it. Some butterfly eggs may be round, some oval and some may be ribbed while others may have other features. The egg shape depends on the type of butterfly that laid the egg.
+                                                                </br>
+                                                                Butterfly eggs are usually laid on the leaves of plants, so if you are actively searching for these very tiny eggs, you will have to take some time and examine quite a few leaves in order to find some.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="larva-wrapper evo-cards">
+                                                <div class="card-num">
+                                                    <p>2</p>
+                                                </div>
+                                                <div class="close-btn">X</div>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="card-image">
+                                                                <img src="images/larva.jpeg" alt="">
+                                                            </div>
+                                                            <div class="card-title">
+                                                                <p>The Larva</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-text">
+                                                                <p>When the egg hatches, the caterpillar will start his work and eat the leaf they were born onto. This is really important because the mother butterfly needs to lay her eggs on the type of leaf the caterpillar will eat – each caterpillar type likes only certain types of leaves. Since they are tiny and can not travel to a new plant, the caterpillar needs to hatch on the kind of leaf it wants to eat. 
+                                                                </br>
+                                                                Caterpillars need to eat and eat so they can grow quickly. When a caterpillar is born, they are extremely small. When they start eating, they instantly start growing and expanding.  Their exoskeleton (skin) does not stretch or grow, so they grow by “molting” (sheding the outgrown skin) several times while it grows. </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pupa-wrapper evo-cards">
+                                                <div class="card-num">
+                                                    <p>3</p>
+                                                </div>
+                                                <div class="close-btn">X</div>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="card-image">
+                                                                <img src="images/pupa.jpeg" alt="">
+                                                            </div>
+                                                            <div class="card-title">
+                                                                <p>The Pupa</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-text">
+                                                                <p>The pupa stage is one of the coolest stages of a butterfly’s life.  As soon as a caterpillar is done growing and they have reached their full length/weight, they form themselves into a pupa, also known as a chrysalis.  From the outside of the pupa, it looks as if the caterpillar may just be resting, but the inside is where all of the action is.  Inside of the pupa, the caterpillar is rapidly changing.
+                                                                </br>
+                                                                Now, as most people know, caterpillars are short, stubby and have no wings at all.  Within the chrysalis the old body parts of the caterpillar are undergoing a remarkable transformation, called ‘metamorphosis,’ to become the beautiful parts that make up the butterfly that will emerge. Tissue, limbs and organs of a caterpillar have all been changed by the time the pupa is finished, and is now ready for the final stage of a butterfly’s life cycle. </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="butterfly-wrapper evo-cards">
+                                                <div class="card-num">
+                                                    <p>4</p>
+                                                </div>
+                                                <div class="close-btn">X</div>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="card-image">
+                                                                <img src="images/butterfly.jpeg" alt="">
+                                                            </div>
+                                                            <div class="card-title">
+                                                                <p>The Butterfly</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-text">
+                                                                <p>Finally, when the caterpillar has done all of its forming and changing inside the pupa, if you are lucky, you will get to see an adult butterfly emerge.  When the butterfly first emerges from the chrysalis, both of the wings are going to be soft and folded against its body. This is because the butterfly had to fit all its new parts inside of the pupa.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="glide__slide image-gallery">
+                                        <div class="gallery-wrapper">
+                                            <div class="carousel">
+                                                <div class="carousel__body">
+                                                    <div class="carousel__prev"><i class="far fa-angle-left"></i></div>
+                                                    <div class="carousel__next"><i class="far fa-angle-right"></i></div>
+                                                    <div class="carousel__slider">
+                                                        <div class="carousel__slider__item">
+                                                            <div class="item__3d-frame">
+                                                            <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                                <img src="images/blue.jpg" alt="">
+                                                                <p class="gallery-item-title">Blue Morpho Butterfly</p>
+                                                                <p>the wings of the Blue Morpho butterfly are a stunning vibrant blue with jet black edges. Like many other species, this one also constitutes as some of the largest butterflies in the world, primarily because the size of their wingspan ranges from 5-8 inches.</p>
+                                                            </div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel__slider__item">
+                                                            <div class="item__3d-frame">
+                                                            <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                                <img src="images/copper.jpg" alt="">
+                                                                <p class="gallery-item-title">Small Copper Butterfly</p>
+                                                                <p>This butterfly species is best known as a fat flying insect with beautifully vibrant copper-colored forewings. Its population is widespread through Ireland and Britain. The wingspan of these butterflies’ averages to 32-35 mm for both males and females and their upper wing side displays a shiny yellow color with dark brown margins and black blotches.</p>
+                                                            </div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel__slider__item">
+                                                            <div class="item__3d-frame">
+                                                            <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                                <img src="images/swallow.jpg" alt="">
+                                                                <p class="gallery-item-title">Swallowtail Butterfly</p>
+                                                                <p>These butterflies have over 500 species, and they belong to the family Papilionidae. They are really large, colorful, and very widespread with the majority of their species found in every continent except Antarctica.</p>
+                                                            </div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                            <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <!-- Setup Shoelace JS -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/shoelace.js"></script>
+
+        <!-- Setup Glide JS for Carousel - https://glidejs.com/ -->
+        <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+
+        <!-- Setup Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+        <!-- Setup Anime JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+        <!-- Setup Custom JS -->
+        <script src="js/javascript.js"></script>
+
+    </footer>
+</html>
